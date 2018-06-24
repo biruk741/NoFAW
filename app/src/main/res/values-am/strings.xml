@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">NoFAW</string>
+    <string name="name">Name</string>
+    <string name="sign_up">Sign up</string>
+    <string name="phone_number">Phone number</string>
+    <string name="farmer">Farmer</string>
+    <string name="government_agent">Government Agent</string>
+    <string name="password">Email</string>
+    <string name="treatment">Treatment</string>
+</resources>

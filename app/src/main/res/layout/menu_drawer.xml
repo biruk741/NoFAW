@@ -4,7 +4,7 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:paddingRight="20dp"
     android:paddingTop="20dp"
-    android:background="@color/colorPrimary"
+    android:background="@mipmap/gradient"
     android:layout_height="match_parent">
     <ImageView
         android:src="@mipmap/nofawlogo"

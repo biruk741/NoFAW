@@ -73,7 +73,7 @@ public class GovernmentMainActivity extends AppCompatActivity {
                 .withSavedState(savedInstanceState) //If you call the method, layout will restore its opened/closed state
                 .withContentClickableWhenMenuOpened(false)
                 .withRootViewElevationPx(5)
-                .withRootViewScale(0.5f)
+                .withRootViewScale(0.65f)
                 .withToolbarMenuToggle((Toolbar) findViewById(R.id.toolbar2))
                 .withMenuLayout(R.layout.menu_drawer)
                 .inject();

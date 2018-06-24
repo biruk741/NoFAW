@@ -57,6 +57,7 @@
             app:centre_button_icon="@drawable/ic_send_black_24dp"
             app:inactive_centre_button_icon_color="#fff"
             app:inactive_item_color="#bbb"
+            app:elevation = "5dp"
             app:space_background_color="#fff"
             app:space_item_icon_only_size="@dimen/space_item_icon_only_size"
             app:space_item_icon_size="@dimen/space_item_icon_default_size"

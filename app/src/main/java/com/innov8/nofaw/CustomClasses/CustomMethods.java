@@ -1,7 +1,13 @@
 package com.innov8.nofaw.CustomClasses;
 
+import android.Manifest;
 import android.app.Activity;
+import android.content.Context;
+import android.content.pm.PackageManager;
 import android.graphics.Typeface;
+import android.location.Location;
+import android.location.LocationManager;
+import android.support.v4.app.ActivityCompat;
 import android.view.View;
 import android.widget.EditText;
 
@@ -10,13 +16,27 @@ import android.widget.EditText;
  */
 
 public class CustomMethods {
-    public static void makeEditTextsAvenir(Activity a,int... edittexts){
+    public static void makeEditTextsAvenir(Activity a, int... edittexts) {
         final String asset = "fonts/avenir.ttf";
-        for (int res: edittexts ) {
-            ((EditText)a.findViewById(res))
+        for (int res : edittexts) {
+            ((EditText) a.findViewById(res))
                     .setTypeface(
-                            Typeface.createFromAsset(a.getAssets(),asset)
+                            Typeface.createFromAsset(a.getAssets(), asset)
                     );
         }
+    }
+
+    public static double[] getLongtitudeAndLatitude(Context c) {
+        LocationManager lm = (LocationManager) c.getSystemService(Context.LOCATION_SERVICE);
+        if (ActivityCompat.checkSelfPermission(c, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(c, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            Location location = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+            double longitude = location.getLongitude();
+            double latitude = location.getLatitude();
+            return new double[]{longitude,latitude};
+        }
+        else{
+            return new double[]{0,0};
+        }
+
     }
 }
