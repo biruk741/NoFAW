@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_margin="16dp"
+    android:padding="16dp"
+    android:background="@mipmap/gradient"
     tools:context="com.innov8.nofaw.SignUpActivity">
 
 
@@ -20,13 +21,15 @@
         android:layout_height="wrap_content">
 
         <RadioButton
-            android:text="Farmer"
+            android:text="@string/farmer"
             android:checked="true"
+            android:textColor="#fff"
             android:layout_width="wrap_content"
             android:paddingRight="16dp"
             android:layout_height="wrap_content" />
         <RadioButton
-            android:text="Government Agent"
+            android:textColor="#fff"
+            android:text="@string/government_agent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </RadioGroup>
@@ -38,6 +41,7 @@
         <EditText
             android:layout_width="match_parent"
             android:hint="@string/name"
+            android:id="@+id/name"
             android:paddingLeft="16dp"
             android:layout_marginTop="16dp"
             android:background="@drawable/eddit"
@@ -46,6 +50,7 @@
             android:layout_width="match_parent"
             android:hint="@string/phone_number"
             android:paddingLeft="16dp"
+            android:id="@+id/phone_num"
             android:layout_marginTop="16dp"
             android:background="@drawable/eddit"
             android:layout_height="50dp" />
@@ -57,6 +62,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <EditText
+            android:id="@+id/govt_name"
             android:layout_width="match_parent"
             android:hint="@string/name"
             android:paddingLeft="16dp"
@@ -64,6 +70,15 @@
             android:background="@drawable/eddit"
             android:layout_height="50dp" />
         <EditText
+            android:id="@+id/govt_email"
+            android:layout_width="match_parent"
+            android:hint="@string/email"
+            android:paddingLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/eddit"
+            android:layout_height="50dp" />
+        <EditText
+            android:id="@+id/govt_password"
             android:layout_width="match_parent"
             android:hint="@string/phone_number"
             android:paddingLeft="16dp"
@@ -79,7 +94,19 @@
         android:gravity="center"
         android:text="@string/sign_up"
         android:textSize="24sp"
+        android:textColor="#fff"
         android:background="@drawable/button"
         android:layout_width="match_parent"
         android:layout_height="50dp" />
+
+    <com.github.ybq.android.spinkit.SpinKitView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/spin_kit_login"
+        style="@style/SpinKitView.ChasingDots"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:visibility="gone"
+        app:SpinKit_Color="#fff" />
 </LinearLayout>
