@@ -58,7 +58,7 @@
                 android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:paddingLeft="16dp"
-                android:text="Identify"
+                android:text="Identification"
                 android:textColor="#313131"
                 android:textSize="24sp" />
         </LinearLayout>
