@@ -1,4 +1,4 @@
-package com.innov8.nofaw;
+package com.innov8.nofaw.Pojos;
 
 /**
  * Created by Biruk on 6/25/2018.
@@ -9,7 +9,7 @@ public class User {
     String id;
     String phoneNumber;
     String type;
-    String email;
+    String password;
 
     public User(){}
 
@@ -18,7 +18,7 @@ public class User {
         this.id = id;
         this.phoneNumber = phoneNumber;
         this.type = type;
-        this.email = email;
+        this.password = email;
     }
 
     public String getName() {
@@ -53,11 +53,11 @@ public class User {
         this.type = type;
     }
 
-    public String getEmail() {
-        return email;
+    public String getPassword() {
+        return password;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setPassword(String password) {
+        this.password = password;
     }
 }

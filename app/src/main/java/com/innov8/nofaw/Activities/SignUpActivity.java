@@ -1,7 +1,9 @@
-package com.innov8.nofaw;
+package com.innov8.nofaw.Activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.innov8.nofaw.R;
 
 public class SignUpActivity extends AppCompatActivity {
 

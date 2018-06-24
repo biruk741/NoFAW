@@ -1,4 +1,4 @@
-package com.innov8.nofaw;
+package com.innov8.nofaw.Pojos;
 
 /**
  * Created by Biruk on 6/25/2018.

@@ -57,12 +57,12 @@ public class UserPrefs {
     }
 
     public String getEmail() {
-        return prefs.getString("email","");
+        return prefs.getString("password","");
 
     }
 
     public void setEmail(String email) {
-        editor.putString("email",email);
+        editor.putString("password",email);
         editor.apply();
     }
 }
