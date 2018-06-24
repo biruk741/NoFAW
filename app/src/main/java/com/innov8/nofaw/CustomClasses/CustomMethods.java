@@ -11,6 +11,10 @@ import android.support.v4.app.ActivityCompat;
 import android.view.View;
 import android.widget.EditText;
 
+import com.innov8.nofaw.Pojos.Report;
+
+import java.util.ArrayList;
+
 /**
  * Created by Biruk on 6/25/2018.
  */
@@ -37,6 +41,16 @@ public class CustomMethods {
         else{
             return new double[]{0,0};
         }
-
+    }
+    public static double[] calculateCoordinateMiddle(ArrayList<Report> reports){
+        double longs = 0;
+        double lats = 0;
+        int length = 0;
+        for(Report report : reports){
+            length++;
+            longs+=Double.parseDouble(report.getLongtitude());
+            lats+=Double.parseDouble(report.getLatitude());
+        }
+        return new double[]{longs/length,lats/length};
     }
 }

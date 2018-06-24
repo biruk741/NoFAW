@@ -1,10 +1,22 @@
 <resources>
     <string name="app_name">NoFAW</string>
-    <string name="name">Name</string>
-    <string name="sign_up">Sign up</string>
-    <string name="phone_number">Phone number</string>
-    <string name="farmer">Farmer</string>
-    <string name="government_agent">Government Agent</string>
+    <string name="name">ስም</string>
+    <string name="sign_up">መዝግብ</string>
+    <string name="phone_number">ስልክ ቁጥር</string>
+    <string name="farmer">ገበሬ</string>
+    <string name="government_agent">የመንግስት ኣካል</string>
     <string name="password">Email</string>
-    <string name="treatment">Treatment</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="reports">Reports</string>
+    <string name="report">Report</string>
+    <string name="map">ካርታ</string>
+    <string name="home">Home</string>
+    <string name="settings">መቼቶች</string>
+    <string name="profile">ኣካውንት</string>
+    <string name="prevention">መጠንቀቅ</string>
+    <string name="treatment">መፍትሄ</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="affected_areas">የተጎዱ ቦታዎች</string>
 </resources>

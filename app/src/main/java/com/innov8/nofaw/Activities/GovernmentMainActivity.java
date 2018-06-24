@@ -1,5 +1,6 @@
 package com.innov8.nofaw.Activities;
 
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -13,6 +14,7 @@ import com.innov8.nofaw.Fragments.GovernmentFragments.HomeFragment;
 import com.innov8.nofaw.Fragments.GovernmentFragments.MapFragment;
 import com.innov8.nofaw.Fragments.GovernmentFragments.ProfileFragment;
 import com.innov8.nofaw.Fragments.GovernmentFragments.ReportsFragment;
+import com.innov8.nofaw.MapsActivity;
 import com.innov8.nofaw.R;
 import com.luseen.spacenavigation.SpaceItem;
 import com.luseen.spacenavigation.SpaceNavigationView;
@@ -50,8 +52,9 @@ public class GovernmentMainActivity extends AppCompatActivity {
 
             @Override
             public void onItemClick(int itemIndex, String itemName) {
+                if(itemIndex!=2)
                 viewPager.setCurrentItem(itemIndex);
-
+                else startActivity(new Intent(getApplicationContext(), MapsActivity.class));
             }
 
             @Override

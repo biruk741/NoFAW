@@ -11,6 +11,7 @@ public class Report {
     String name;
     String phoneNumber;
     String senderId;
+    String notes;
 
     public Report(){}
 
@@ -21,6 +22,16 @@ public class Report {
         this.name = name;
         this.phoneNumber = phoneNumber;
         this.senderId = senderId;
+    }
+
+    public Report(String longtitude, String latitude, String city, String name, String phoneNumber, String senderId, String notes) {
+        this.longtitude = longtitude;
+        this.latitude = latitude;
+        this.city = city;
+        this.name = name;
+        this.phoneNumber = phoneNumber;
+        this.senderId = senderId;
+        this.notes = notes;
     }
 
     public String getLongtitude() {
@@ -69,5 +80,13 @@ public class Report {
 
     public void setSenderId(String senderId) {
         this.senderId = senderId;
+    }
+
+    public String getNotes() {
+        return notes;
+    }
+
+    public void setNotes(String notes) {
+        this.notes = notes;
     }
 }
