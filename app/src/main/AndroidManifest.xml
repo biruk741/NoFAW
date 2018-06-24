@@ -16,7 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SignUpActivity" android:theme="@style/notool"></activity>
+        <activity
+            android:name=".SignUpActivity"
+            android:theme="@style/notool" />
+        <activity android:name=".FarmerMainActivity" />
+        <activity android:name=".GovernmentMainActivity"></activity>
     </application>
 
 </manifest>
