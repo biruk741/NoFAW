@@ -76,7 +76,8 @@
             <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             <!-- </intent-filter> -->
         </activity>
-        <activity android:name=".ExplainerActivity"></activity>
+        <activity android:name=".ExplainerActivity" />
+        <activity android:name=".Activities.ReportDetailActivity"></activity>
     </application>
 
 </manifest>

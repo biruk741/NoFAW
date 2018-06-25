@@ -21,6 +21,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 
 /**
@@ -69,9 +71,9 @@ public class CustomMethods {
         for(int i = 0;i<jsonArray.length();i++){
             JSONObject current = jsonArray.getJSONObject(i);
             String type = current.getString("type");
-            if(type.toLowerCase().equals("imageView")){
+            if(type.toLowerCase().equals("image")){
                 ImageView imageView = new ImageView(c);
-                imageView.setImageResource(current.getInt("src"));
+                imageView.setImageResource(CustomMethods.getRes(current.getString("src"),c));
                 view.addView(imageView);
             }
             else{
@@ -82,4 +84,24 @@ public class CustomMethods {
         }
         return view;
     }
+    public static String loadJSONFromAsset(String name) {
+        String json = null;
+        try {
+            InputStream is = getActivity().getAssets().open(name + ".json");
+            int size = is.available();
+            byte[] buffer = new byte[size];
+            is.read(buffer);
+            is.close();
+            json = new String(buffer, "UTF-8");
+        } catch (IOException ex) {
+            ex.printStackTrace();
+            return null;
+        }
+        return json;
+    }
+    public static int getRes(String s,Context c){
+        return c.getResources().getIdentifier("picture0001", "drawable", c.getPackageName());
+
+    }
+
 }
