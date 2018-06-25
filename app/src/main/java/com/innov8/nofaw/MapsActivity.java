@@ -47,7 +47,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         for(Report report : reports){
             LatLng location = new LatLng(Double.parseDouble(report.getLatitude()),Double.parseDouble(report.getLongtitude()));
-            mMap.addMarker(new MarkerOptions().position(location).title("By " + report.getName() + "\n" + report.getNotes()));
+            mMap.addMarker(new MarkerOptions().position(location).title("By " + report.getName() + "\n" + report.getDetailText()));
         }
 
         double[] middle = CustomMethods.calculateCoordinateMiddle(reports);

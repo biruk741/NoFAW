@@ -1,0 +1,14 @@
+[
+  {
+    "type" : "imageview",
+    "src" : 3519081350
+  },
+  {
+    "type":"textview",
+    "text" : "Prevention Methods!"
+  },
+  {
+    "type":"textview",
+    "text" : "To prevent the fall armyworm, many steps are needed."
+  }
+]

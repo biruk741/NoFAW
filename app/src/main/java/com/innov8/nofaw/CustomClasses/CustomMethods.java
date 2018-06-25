@@ -9,9 +9,17 @@ import android.location.Location;
 import android.location.LocationManager;
 import android.support.v4.app.ActivityCompat;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.innov8.nofaw.Pojos.Report;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 
@@ -52,5 +60,26 @@ public class CustomMethods {
             lats+=Double.parseDouble(report.getLatitude());
         }
         return new double[]{longs/length,lats/length};
+    }
+    public static LinearLayout inflateViews(String json,Context c) throws JSONException {
+        LinearLayout view = new LinearLayout(c);
+        view.setOrientation(LinearLayout.VERTICAL);
+        view.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+        JSONArray jsonArray = new JSONArray(json);
+        for(int i = 0;i<jsonArray.length();i++){
+            JSONObject current = jsonArray.getJSONObject(i);
+            String type = current.getString("type");
+            if(type.toLowerCase().equals("imageView")){
+                ImageView imageView = new ImageView(c);
+                imageView.setImageResource(current.getInt("src"));
+                view.addView(imageView);
+            }
+            else{
+                TextView textView = new TextView(c);
+                textView.setText(current.getString("text"));
+                view.addView(textView);
+            }
+        }
+        return view;
     }
 }

@@ -11,7 +11,9 @@ public class Report {
     String name;
     String phoneNumber;
     String senderId;
-    String notes;
+    String cropType;
+    String cropImage;
+    String detailText;
 
     public Report(){}
 
@@ -31,7 +33,7 @@ public class Report {
         this.name = name;
         this.phoneNumber = phoneNumber;
         this.senderId = senderId;
-        this.notes = notes;
+        this.detailText = notes;
     }
 
     public String getLongtitude() {
@@ -82,11 +84,27 @@ public class Report {
         this.senderId = senderId;
     }
 
-    public String getNotes() {
-        return notes;
+    public String getDetailText() {
+        return detailText;
     }
 
-    public void setNotes(String notes) {
-        this.notes = notes;
+    public void setDetailText(String detailText) {
+        this.detailText = detailText;
+    }
+
+    public String getCropType() {
+        return cropType;
+    }
+
+    public void setCropType(String cropType) {
+        this.cropType = cropType;
+    }
+
+    public String getCropImage() {
+        return cropImage;
+    }
+
+    public void setCropImage(String cropImage) {
+        this.cropImage = cropImage;
     }
 }
